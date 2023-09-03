@@ -9,5 +9,229 @@
 </head>
 <body>
     <h1>Smart Parking 🚗</h1>
+
+    <h2>Problem</h2>
+    <p>
+
+    
+        <ul>
+            <li>A study from INRIX collected data from 6,000 drivers from the 10 largest cities in the US. </li>
+            <li>The study found that drivers spend on average 17 hours a year looking for parking and up to 107 hours in the largest cities. Drivers spend about a $1000 a year to look for parking and up to $2000 a year in the largest cities in fuel costs.  </li>
+            <li>
+                Parking can also have an impact on business. 
+
+                <ul>
+                    <li>63% of drivers avoided driving to a destination due to the challenge of parking. </li>
+                    <li>Americans are skipping out on recreation and medical appointments due to parking. </li>
+                </ul>
+            </li>
+
+            <li>
+                Also parking can cause stress 
+
+                <ul>
+                    <li>
+                        61% of drivers felt stressed to find a parking spot. 
+
+                    </li>
+
+                    <li>
+                        49% of the drivers missed an appointment due to parking. 
+
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                Looking for parking also causes pollution. 
+
+                <ul>
+                    <li>
+                        Generate approximately 730 million vehicle miles traveled (VMT) 
+
+                    </li>
+
+                    <li>
+                        Creates 47,000 tons of carbon dioxide emissions annually. 
+
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                On average parking contributes to 30% of the traffic in the cities. 
+
+            </li>
+
+            <li>
+                Parking can also increase commuting times by 20-50%.
+
+            </li>
+        </ul>
+    </p>
+
+    <h2>Current Solutions</h2>
+    <p>
+        Some parking garages have sensors over each parking stall to detect the availability, however this approach has a high installation cost and maintenance cost and is not practical and cost effective for street parking.
+
+    </p>
+
+    <img src="current_solution.png" alt="parking stall image" height="400" width="600">
+
+    <h2>Solution</h2>
+    
+    <p>
+        The solution is a system where a drone takes ariel pictures of a city block. These pictures are going to be processed to find available parking stalls. The user will then be able to use an app to find parking near their desired location or reserve parking ahead of time. 
+
+        <ul>
+            <li>
+                Each parking stall assigned a unique identifier (UID).
+
+                <ul>
+                    <li>
+                        This identifier can be a unique numeric code 
+
+                    </li>
+
+                    <li>
+                        QR code, barcode etc.
+
+
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                Drone takes an aerial image
+
+                <ul>
+                    <li>
+                        If the unique identifier (UID) is visible => stall is available 
+
+                    </li>
+
+                    <li>
+                        If the unique identifier (UID) is not visible => the stall is not available.
+
+
+                    </li>
+
+                    <li>
+                        An appropriate image processing or pattern recognition algorithm can be used to identity the UID to determine the parking availability.  
+
+
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                Drivers can use an app to find available parking in proximity to desired location. The app can also be used to reserve parking. 
+
+            </li>
+        </ul>
+
+    </p>
+
+    <h2>Implementation</h2>
+
+    <p>
+        <ul>
+            <li>
+                Created a prototype of a city block with 20 parking stalls.
+
+            </li>
+
+            <li>
+                Each parking stall has a unique numeric identifier. 
+
+            </li>
+
+            <li>
+                The model has a webcam above acting as a drone. 
+
+            </li>
+
+            <li>
+                To recognize the unique identifiers from an image, I used Optical Character Recognition (OCR). 
+
+            </li>
+
+            <li>
+                Identify available/occupied parking stall
+
+                <ul>
+                    <li>
+                        Use Optical Character Recognition (OCR) to identify numeric unique id
+
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                OCR is a machine learning algorithm that uses pattern matching algorithms to extract text from an image. 
+
+            </li>
+
+            <li>
+                Created an admin interface using Flask.
+
+                <ul>
+                    <li>
+                        Users can a take a picture of the parking stalls through the website. 
+
+                    </li>
+
+                    <li>
+                        They will then be shown a dashboard showing the parking availability.
+
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </p>
+
+    <img src = "smart-parking-flowchart.png">
+    <img src = "img1.jpg" height="400" width="600">
+    <img src = "img2.jpg" height="400" width="600">
+    <img src = "map.png" >
+
+    <h2>Limitations</h2>
+    <p>
+        <ul>
+            <li>
+                Cars with numbers on the roof can deceive the system into thinking that number is a open parking stall. 
+
+            </li>
+
+            <li>
+                People can take other's reserved parking
+
+            </li>
+
+            <li>
+                If a drone is flying on a pre-programmed route then it can take some time for the drone return to a specific part of the road, therefore this may increase the time it takes for the availability data to be updated.
+
+            </li>
+
+            <li>
+                The identifiers can be can be covered by snow or can be damaged. 
+
+            </li>
+        </ul>
+    </p>
+
+    <img src="car-with-number.png">
+    <img src="car-with-snow.png">
+
+
+
+    <h2>Science Fair Participation</h2>
+    <p>
+        Partcipated in the Alameda County Science and Engineering Fair (ACSEF) with this project. 
+    </p>
+
+
+    
+
 </body>
 </html>
