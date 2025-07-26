@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Parking - Dhruv Shah</title>
+    <title>Netra AI - Dhruv Shah</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -163,33 +163,38 @@
             color: var(--text-primary);
         }
 
-        /* Statistics Grid */
-        .stats-grid {
+        /* Features Grid */
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
             margin: 2rem 0;
         }
 
-        .stat-card {
+        .feature-card {
             background: var(--bg-primary);
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 12px;
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-md);
             border: 1px solid var(--border-color);
             text-align: center;
         }
 
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
+        .feature-icon {
+            font-size: 2.5rem;
             color: var(--primary-color);
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
 
-        .stat-label {
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .feature-description {
             color: var(--text-secondary);
-            font-size: 0.875rem;
         }
 
         /* Implementation Steps */
@@ -267,37 +272,8 @@
             font-size: 1.25rem;
         }
 
-        /* Image Gallery */
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .gallery-item {
-            background: var(--bg-primary);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-color);
-        }
-
-        .gallery-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .gallery-caption {
-            padding: 1rem;
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            font-style: italic;
-        }
-
-        /* Limitations */
-        .limitations {
+        /* Future Plans */
+        .future-plans {
             background: var(--bg-accent);
             padding: 2rem;
             border-radius: 12px;
@@ -305,7 +281,7 @@
             margin: 2rem 0;
         }
 
-        .limitation-item {
+        .plan-item {
             display: flex;
             align-items: flex-start;
             gap: 0.75rem;
@@ -314,19 +290,19 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-        .limitation-item:last-child {
+        .plan-item:last-child {
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
         }
 
-        .limitation-icon {
-            color: #ef4444;
+        .plan-icon {
+            color: var(--primary-color);
             font-size: 1.25rem;
             flex-shrink: 0;
         }
 
-        .limitation-text {
+        .plan-text {
             color: var(--text-secondary);
         }
 
@@ -351,6 +327,33 @@
             transform: translateY(-2px);
         }
 
+        /* Project Links */
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
@@ -361,12 +364,13 @@
                 grid-template-columns: 1fr;
             }
 
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .features-grid {
+                grid-template-columns: 1fr;
             }
 
-            .image-gallery {
-                grid-template-columns: 1fr;
+            .project-links {
+                flex-direction: column;
+                align-items: center;
             }
 
             .project-hero {
@@ -397,10 +401,20 @@
     <section class="project-hero">
         <div class="container">
             <div class="project-icon">
-                <i class="fas fa-car"></i>
+                <i class="fas fa-video"></i>
             </div>
-            <h1>Smart Parking</h1>
-            <p class="subtitle">Drone-Based Intelligent Parking Detection System</p>
+            <h1>Netra AI</h1>
+            <p class="subtitle">AI-Powered Video Stream Security Application</p>
+            <div class="project-links">
+                <a href="https://devpost.com/software/netra-ai" target="_blank" class="project-link">
+                    <i class="fas fa-external-link-alt"></i>
+                    Devpost
+                </a>
+                <a href="https://github.com/Vaddala06/calhacks" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+            </div>
             <a href="./index.html" class="back-button">
                 <i class="fas fa-arrow-left"></i>
                 Back to Portfolio
@@ -416,220 +430,226 @@
                 The Problem
             </h2>
             
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">17</div>
-                    <div class="stat-label">Hours per year spent looking for parking</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">$1,000</div>
-                    <div class="stat-label">Average annual cost per driver</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">63%</div>
-                    <div class="stat-label">Drivers avoid destinations due to parking</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">30%</div>
-                    <div class="stat-label">Traffic caused by parking searches</div>
-                </div>
-            </div>
-
             <p class="content-text">
-                Parking challenges have become a significant urban problem affecting millions of drivers daily. 
-                A comprehensive study from INRIX collected data from 6,000 drivers across the 10 largest cities in the US, 
-                revealing the staggering impact of parking inefficiencies on our daily lives.
+                Traditional video surveillance systems require manual review of hours of footage to find specific events, 
+                making them inefficient and time-consuming. When incidents occur, users often need to sift through 
+                extensive video recordings to understand what happened, which is both frustrating and impractical.
             </p>
 
             <div class="problem-solution-grid">
                 <div class="problem-card">
-                    <h3 class="card-title">Economic Impact</h3>
+                    <h3 class="card-title">Manual Video Review</h3>
                     <p class="content-text">
-                        Drivers spend up to $2,000 annually in fuel costs in major cities, with the average driver 
-                        spending $1,000 per year just looking for parking spots.
+                        Users often need to manually review hours of surveillance footage to find specific events, 
+                        which is time-consuming and inefficient. This was the exact challenge faced when someone 
+                        stole something in front of a family member's house.
                     </p>
                 </div>
-                <div class="problem-card">
-                    <h3 class="card-title">Environmental Impact</h3>
+                <div class="solution-card">
+                    <h3 class="card-title">AI-Powered Solution</h3>
                     <p class="content-text">
-                        Parking searches generate approximately 730 million vehicle miles traveled annually, 
-                        creating 47,000 tons of carbon dioxide emissions.
+                        Netra AI transforms video monitoring with instant event querying and real-time alerts. 
+                        Users can ask natural language questions about events and receive immediate, detailed responses.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Current Solutions -->
+    <!-- Features Section -->
     <section class="content-section">
         <div class="container">
             <h2 class="section-title">
-                <i class="fas fa-search section-icon"></i>
-                Current Solutions
+                <i class="fas fa-star section-icon"></i>
+                Key Features
             </h2>
-            <p class="content-text">
-                Some parking garages have sensors over each parking stall to detect availability. However, 
-                this approach has high installation and maintenance costs, making it impractical and 
-                cost-prohibitive for street parking applications.
-            </p>
             
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="current_solution.png" alt="Current parking sensor solution" class="gallery-image">
-                    <div class="gallery-caption">Traditional parking stall sensors - expensive and limited to garages</div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="feature-title">Instant Event Querying</div>
+                    <div class="feature-description">
+                        Ask natural language questions about events in your video feed and get immediate answers
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="feature-title">Real-Time Alerts</div>
+                    <div class="feature-description">
+                        Receive instant notifications with detailed descriptions of important events as they happen
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="feature-title">Speech Recognition</div>
+                    <div class="feature-description">
+                        Voice-to-text functionality for easy communication with the system, making it accessible for all users
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="feature-title">Motion Detection</div>
+                    <div class="feature-description">
+                        Automatic detection and recording of motion events with configurable sensitivity settings
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="feature-title">AI Analysis</div>
+                    <div class="feature-description">
+                        Advanced AI processing using Google Gemini to analyze video content and extract meaningful insights
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="feature-title">Smart Storage</div>
+                    <div class="feature-description">
+                        Efficient storage and retrieval of alert messages using ChromaDB for quick access to historical data
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution -->
+    <!-- How It Works -->
     <section class="content-section">
         <div class="container">
             <h2 class="section-title">
-                <i class="fas fa-lightbulb section-icon"></i>
-                Our Solution
+                <i class="fas fa-cogs section-icon"></i>
+                How It Works
             </h2>
-            <p class="content-text">
-                Smart Parking is an innovative drone-based system that takes aerial pictures of city blocks 
-                and processes them to identify available parking stalls in real-time. Users can then use a 
-                mobile app to find parking near their desired location or reserve parking ahead of time.
-            </p>
-
+            
             <div class="implementation-steps">
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <div class="step-title">Unique Identifiers</div>
-                        <div class="step-description">Each parking stall is assigned a unique identifier (UID) - either a numeric code, QR code, or barcode.</div>
+                        <div class="step-title">Video Processing</div>
+                        <div class="step-description">
+                            The system continuously monitors video streams using OpenCV for motion detection and records 
+                            5-second clips when activity is detected.
+                        </div>
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <div class="step-title">Aerial Imaging</div>
-                        <div class="step-description">Drones capture aerial images of parking areas at regular intervals.</div>
+                        <div class="step-title">AI Analysis</div>
+                        <div class="step-description">
+                            Google Gemini AI analyzes the video content to understand what's happening and generates 
+                            detailed descriptions of events.
+                        </div>
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <div class="step-title">Image Processing</div>
-                        <div class="step-description">OCR algorithms identify visible UIDs to determine parking availability.</div>
+                        <div class="step-title">Natural Language Queries</div>
+                        <div class="step-description">
+                            Users can ask questions like "Did someone come to my house?" and receive instant, 
+                            accurate responses based on the analyzed video data.
+                        </div>
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">4</div>
                     <div class="step-content">
-                        <div class="step-title">Mobile App</div>
-                        <div class="step-description">Users access real-time parking availability and can reserve spots through a mobile application.</div>
+                        <div class="step-title">Real-Time Alerts</div>
+                        <div class="step-description">
+                            Important events trigger immediate alerts with detailed descriptions, keeping users 
+                            informed of significant activities in real-time.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Implementation -->
+    <!-- Technologies -->
     <section class="content-section">
         <div class="container">
             <h2 class="section-title">
-                <i class="fas fa-cogs section-icon"></i>
-                Implementation
+                <i class="fas fa-tools section-icon"></i>
+                Technologies Used
             </h2>
             
             <div class="technologies-grid">
                 <div class="tech-item">
-                    <i class="fas fa-cube tech-icon"></i>
-                    <span><strong>Prototype Model:</strong> 20 parking stalls on a city block</span>
+                    <i class="fab fa-python tech-icon"></i>
+                    <span><strong>Python:</strong> Core programming language for the application</span>
                 </div>
                 <div class="tech-item">
-                    <i class="fas fa-camera tech-icon"></i>
-                    <span><strong>Webcam System:</strong> Simulates drone aerial imaging</span>
+                    <i class="fas fa-brain tech-icon"></i>
+                    <span><strong>Google Gemini:</strong> AI model for video analysis and content understanding</span>
                 </div>
                 <div class="tech-item">
                     <i class="fas fa-eye tech-icon"></i>
-                    <span><strong>OCR Technology:</strong> Optical Character Recognition for UID detection</span>
+                    <span><strong>OpenCV:</strong> Computer vision library for motion detection and video processing</span>
                 </div>
                 <div class="tech-item">
-                    <i class="fas fa-globe tech-icon"></i>
-                    <span><strong>Flask Web App:</strong> Admin interface for system management</span>
+                    <i class="fas fa-microphone tech-icon"></i>
+                    <span><strong>DeepGram:</strong> Speech-to-text functionality for voice interactions</span>
                 </div>
-            </div>
-
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="smart-parking-flowchart.png" alt="Smart Parking System Architecture" class="gallery-image">
-                    <div class="gallery-caption">System architecture showing the complete flow from image capture to availability display</div>
+                <div class="tech-item">
+                    <i class="fas fa-database tech-icon"></i>
+                    <span><strong>ChromaDB:</strong> Vector database for storing and retrieving alert messages</span>
                 </div>
-                <div class="gallery-item">
-                    <img src="img1.jpg" alt="Webcam setup for parking detection" class="gallery-image">
-                    <div class="gallery-caption">Lenovo webcam mounted on a sliding wooden beam to simulate drone movement</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="img2.jpg" alt="Tabletop parking model" class="gallery-image">
-                    <div class="gallery-caption">Tabletop model with 20 parking stalls, each with unique two-digit identifiers</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="map.png" alt="Parking availability map" class="gallery-image">
-                    <div class="gallery-caption">Admin interface showing real-time parking availability map after image processing</div>
+                <div class="tech-item">
+                    <i class="fas fa-code tech-icon"></i>
+                    <span><strong>Reflex:</strong> Full-stack framework for frontend and backend development</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Limitations -->
+    <!-- Future Plans -->
     <section class="content-section">
         <div class="container">
             <h2 class="section-title">
-                <i class="fas fa-exclamation-circle section-icon"></i>
-                Limitations & Challenges
+                <i class="fas fa-rocket section-icon"></i>
+                Future Plans
             </h2>
             
-            <div class="limitations">
-                <div class="limitation-item">
-                    <i class="fas fa-car limitation-icon"></i>
-                    <div class="limitation-text">Cars with numbers on the roof can deceive the system into thinking that number is an open parking stall.</div>
+            <div class="future-plans">
+                <div class="plan-item">
+                    <i class="fas fa-mobile-alt plan-icon"></i>
+                    <div class="plan-text">
+                        <strong>Real-Time Text Alerts:</strong> Send detailed event descriptions via text messages, 
+                        such as "Your daughter has arrived home" or "There is a fire outside your home."
+                    </div>
                 </div>
-                <div class="limitation-item">
-                    <i class="fas fa-user limitation-icon"></i>
-                    <div class="limitation-text">People can take others' reserved parking spots without consequences.</div>
+                <div class="plan-item">
+                    <i class="fas fa-globe plan-icon"></i>
+                    <div class="plan-text">
+                        <strong>Enhanced AI Training:</strong> Train the AI model on video data from different 
+                        countries and diverse populations for better global applicability.
+                    </div>
                 </div>
-                <div class="limitation-item">
-                    <i class="fas fa-clock limitation-icon"></i>
-                    <div class="limitation-text">Pre-programmed drone routes may cause delays in updating availability data for specific areas.</div>
-                </div>
-                <div class="limitation-item">
-                    <i class="fas fa-snowflake limitation-icon"></i>
-                    <div class="limitation-text">Identifiers can be covered by snow or damaged, affecting system reliability.</div>
-                </div>
-            </div>
-
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="car-with-number.png" alt="Car with number on roof" class="gallery-image">
-                    <div class="gallery-caption">Example of how cars with numbers on the roof could confuse the system</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="car-with-snow.png" alt="Car covered in snow" class="gallery-image">
-                    <div class="gallery-caption">Weather conditions like snow can obscure parking identifiers</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Achievement -->
-    <section class="content-section">
-        <div class="container">
-            <div class="achievement">
-                <div class="achievement-icon">
-                    <i class="fas fa-trophy"></i>
-                </div>
-                <div class="achievement-title">Science Fair Recognition</div>
-                <div class="achievement-description">
-                    Successfully participated in the Alameda County Science and Engineering Fair (ACSEF) 
-                    with this innovative parking solution project.
+                <div class="plan-item">
+                    <i class="fas fa-shield-alt plan-icon"></i>
+                    <div class="plan-text">
+                        <strong>Improved Security:</strong> Implement Multi-Factor Authentication and encryption 
+                        to enhance privacy and security of user data.
+                    </div>
                 </div>
             </div>
         </div>
@@ -650,4 +670,4 @@
         });
     </script>
 </body>
-</html>
+</html> 

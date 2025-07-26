@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Parking - Dhruv Shah</title>
+    <title>Moods and Metrics - Dhruv Shah</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -97,6 +97,19 @@
             margin-bottom: 2rem;
         }
 
+        /* Award Badge */
+        .award-badge {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            display: inline-block;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
         /* Content Sections */
         .content-section {
             padding: 4rem 0;
@@ -163,33 +176,38 @@
             color: var(--text-primary);
         }
 
-        /* Statistics Grid */
-        .stats-grid {
+        /* Features Grid */
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
             margin: 2rem 0;
         }
 
-        .stat-card {
+        .feature-card {
             background: var(--bg-primary);
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 12px;
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-md);
             border: 1px solid var(--border-color);
             text-align: center;
         }
 
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
+        .feature-icon {
+            font-size: 2.5rem;
             color: var(--primary-color);
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
 
-        .stat-label {
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .feature-description {
             color: var(--text-secondary);
-            font-size: 0.875rem;
         }
 
         /* Implementation Steps */
@@ -267,37 +285,8 @@
             font-size: 1.25rem;
         }
 
-        /* Image Gallery */
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .gallery-item {
-            background: var(--bg-primary);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-color);
-        }
-
-        .gallery-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .gallery-caption {
-            padding: 1rem;
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            font-style: italic;
-        }
-
-        /* Limitations */
-        .limitations {
+        /* Future Plans */
+        .future-plans {
             background: var(--bg-accent);
             padding: 2rem;
             border-radius: 12px;
@@ -305,7 +294,7 @@
             margin: 2rem 0;
         }
 
-        .limitation-item {
+        .plan-item {
             display: flex;
             align-items: flex-start;
             gap: 0.75rem;
@@ -314,19 +303,19 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-        .limitation-item:last-child {
+        .plan-item:last-child {
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
         }
 
-        .limitation-icon {
-            color: #ef4444;
+        .plan-icon {
+            color: var(--primary-color);
             font-size: 1.25rem;
             flex-shrink: 0;
         }
 
-        .limitation-text {
+        .plan-text {
             color: var(--text-secondary);
         }
 
@@ -351,6 +340,33 @@
             transform: translateY(-2px);
         }
 
+        /* Project Links */
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
@@ -361,12 +377,13 @@
                 grid-template-columns: 1fr;
             }
 
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .features-grid {
+                grid-template-columns: 1fr;
             }
 
-            .image-gallery {
-                grid-template-columns: 1fr;
+            .project-links {
+                flex-direction: column;
+                align-items: center;
             }
 
             .project-hero {
@@ -397,10 +414,23 @@
     <section class="project-hero">
         <div class="container">
             <div class="project-icon">
-                <i class="fas fa-car"></i>
+                <i class="fas fa-brain"></i>
             </div>
-            <h1>Smart Parking</h1>
-            <p class="subtitle">Drone-Based Intelligent Parking Detection System</p>
+            <h1>Moods and Metrics</h1>
+            <p class="subtitle">AI-Powered Mental Health Analysis Tool</p>
+            <div class="award-badge">
+                🏆 Winner - Otsuka Valuenex Award at TreeHacks 2025
+            </div>
+            <div class="project-links">
+                <a href="https://devpost.com/software/moodmap-ai" target="_blank" class="project-link">
+                    <i class="fas fa-external-link-alt"></i>
+                    Devpost
+                </a>
+                <a href="https://github.com/corey-shen/stress-level-audio-analysis" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+            </div>
             <a href="./index.html" class="back-button">
                 <i class="fas fa-arrow-left"></i>
                 Back to Portfolio
@@ -416,220 +446,253 @@
                 The Problem
             </h2>
             
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">17</div>
-                    <div class="stat-label">Hours per year spent looking for parking</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">$1,000</div>
-                    <div class="stat-label">Average annual cost per driver</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">63%</div>
-                    <div class="stat-label">Drivers avoid destinations due to parking</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">30%</div>
-                    <div class="stat-label">Traffic caused by parking searches</div>
-                </div>
-            </div>
-
             <p class="content-text">
-                Parking challenges have become a significant urban problem affecting millions of drivers daily. 
-                A comprehensive study from INRIX collected data from 6,000 drivers across the 10 largest cities in the US, 
-                revealing the staggering impact of parking inefficiencies on our daily lives.
+                In today's world, stress and anxiety are increasingly prevalent, yet many people struggle to understand 
+                and quantify their emotional states. Traditional mental health monitoring often relies on subjective 
+                self-reporting, making it difficult to get accurate, real-time insights into one's emotional well-being.
             </p>
 
             <div class="problem-solution-grid">
                 <div class="problem-card">
-                    <h3 class="card-title">Economic Impact</h3>
+                    <h3 class="card-title">Limited Self-Awareness</h3>
                     <p class="content-text">
-                        Drivers spend up to $2,000 annually in fuel costs in major cities, with the average driver 
-                        spending $1,000 per year just looking for parking spots.
+                        People often struggle to accurately assess their own emotional states and stress levels, 
+                        leading to poor mental health management and delayed intervention when needed.
                     </p>
                 </div>
-                <div class="problem-card">
-                    <h3 class="card-title">Environmental Impact</h3>
+                <div class="solution-card">
+                    <h3 class="card-title">AI-Powered Analysis</h3>
                     <p class="content-text">
-                        Parking searches generate approximately 730 million vehicle miles traveled annually, 
-                        creating 47,000 tons of carbon dioxide emissions.
+                        Moods and Metrics provides objective, multi-modal analysis of emotional states through 
+                        audio, video, and transcription sentiment analysis, helping users gain deeper insights into their mental well-being.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Current Solutions -->
+    <!-- Features Section -->
     <section class="content-section">
         <div class="container">
             <h2 class="section-title">
-                <i class="fas fa-search section-icon"></i>
-                Current Solutions
+                <i class="fas fa-star section-icon"></i>
+                Analysis Modalities
             </h2>
-            <p class="content-text">
-                Some parking garages have sensors over each parking stall to detect availability. However, 
-                this approach has high installation and maintenance costs, making it impractical and 
-                cost-prohibitive for street parking applications.
-            </p>
             
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="current_solution.png" alt="Current parking sensor solution" class="gallery-image">
-                    <div class="gallery-caption">Traditional parking stall sensors - expensive and limited to garages</div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="feature-title">Audio Analysis</div>
+                    <div class="feature-description">
+                        Utilizes a fine-tuned wav2vec2 transformer to capture arousal, valence, and dominance values, 
+                        mapping them to stress scores through advanced sentiment analysis
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="feature-title">Video Analysis</div>
+                    <div class="feature-description">
+                        Sends video clips to Google Gemini AI for facial expression analysis, evaluating calm/stress 
+                        levels with detailed reasoning
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="feature-title">Transcription Analysis</div>
+                    <div class="feature-description">
+                        Performs sentiment analysis on video transcription data, providing comprehensive emotional 
+                        insights through text analysis
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="feature-title">2D & 3D Visualization</div>
+                    <div class="feature-description">
+                        Interactive data visualization using three.js to map valence, dominance, and arousal 
+                        in both 2D and 3D formats
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="feature-title">AI-Driven Insights</div>
+                    <div class="feature-description">
+                        Advanced AI models provide real-time emotional analysis and personalized insights 
+                        for better mental health understanding
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="feature-title">User-Friendly Interface</div>
+                    <div class="feature-description">
+                        Clean React frontend with intuitive UI design, making complex emotional analysis 
+                        accessible to everyone
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution -->
+    <!-- How It Works -->
     <section class="content-section">
         <div class="container">
             <h2 class="section-title">
-                <i class="fas fa-lightbulb section-icon"></i>
-                Our Solution
+                <i class="fas fa-cogs section-icon"></i>
+                How It Works
             </h2>
-            <p class="content-text">
-                Smart Parking is an innovative drone-based system that takes aerial pictures of city blocks 
-                and processes them to identify available parking stalls in real-time. Users can then use a 
-                mobile app to find parking near their desired location or reserve parking ahead of time.
-            </p>
-
+            
             <div class="implementation-steps">
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <div class="step-title">Unique Identifiers</div>
-                        <div class="step-description">Each parking stall is assigned a unique identifier (UID) - either a numeric code, QR code, or barcode.</div>
+                        <div class="step-title">Multi-Modal Input</div>
+                        <div class="step-description">
+                            Users can provide audio recordings, video clips, or text transcriptions for analysis, 
+                            allowing flexibility in how they want to assess their emotional state.
+                        </div>
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <div class="step-title">Aerial Imaging</div>
-                        <div class="step-description">Drones capture aerial images of parking areas at regular intervals.</div>
+                        <div class="step-title">AI Processing</div>
+                        <div class="step-description">
+                            Advanced AI models (wav2vec2 for audio, Gemini for video/text) analyze the input 
+                            to extract emotional indicators like arousal, valence, and dominance.
+                        </div>
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <div class="step-title">Image Processing</div>
-                        <div class="step-description">OCR algorithms identify visible UIDs to determine parking availability.</div>
+                        <div class="step-title">Emotional Mapping</div>
+                        <div class="step-description">
+                            Using a tri-dimensional model of core affect, the system maps emotional data 
+                            to comprehensive stress scores and emotional states.
+                        </div>
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">4</div>
                     <div class="step-content">
-                        <div class="step-title">Mobile App</div>
-                        <div class="step-description">Users access real-time parking availability and can reserve spots through a mobile application.</div>
+                        <div class="step-title">Interactive Visualization</div>
+                        <div class="step-description">
+                            Results are presented through interactive 2D and 3D visualizations, helping users 
+                            understand their emotional patterns and trends over time.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Implementation -->
+    <!-- Technologies -->
     <section class="content-section">
         <div class="container">
             <h2 class="section-title">
-                <i class="fas fa-cogs section-icon"></i>
-                Implementation
+                <i class="fas fa-tools section-icon"></i>
+                Technologies Used
             </h2>
             
             <div class="technologies-grid">
                 <div class="tech-item">
-                    <i class="fas fa-cube tech-icon"></i>
-                    <span><strong>Prototype Model:</strong> 20 parking stalls on a city block</span>
+                    <i class="fab fa-react tech-icon"></i>
+                    <span><strong>React:</strong> Frontend framework for interactive UI components</span>
                 </div>
                 <div class="tech-item">
-                    <i class="fas fa-camera tech-icon"></i>
-                    <span><strong>Webcam System:</strong> Simulates drone aerial imaging</span>
+                    <i class="fab fa-python tech-icon"></i>
+                    <span><strong>Python:</strong> Backend development and AI model integration</span>
                 </div>
                 <div class="tech-item">
-                    <i class="fas fa-eye tech-icon"></i>
-                    <span><strong>OCR Technology:</strong> Optical Character Recognition for UID detection</span>
+                    <i class="fas fa-brain tech-icon"></i>
+                    <span><strong>Hugging Face:</strong> Fine-tuned wav2vec2 transformer for audio analysis</span>
                 </div>
                 <div class="tech-item">
-                    <i class="fas fa-globe tech-icon"></i>
-                    <span><strong>Flask Web App:</strong> Admin interface for system management</span>
+                    <i class="fas fa-cogs tech-icon"></i>
+                    <span><strong>PyTorch:</strong> Deep learning framework for model training and inference</span>
                 </div>
-            </div>
-
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="smart-parking-flowchart.png" alt="Smart Parking System Architecture" class="gallery-image">
-                    <div class="gallery-caption">System architecture showing the complete flow from image capture to availability display</div>
+                <div class="tech-item">
+                    <i class="fas fa-cloud tech-icon"></i>
+                    <span><strong>FastAPI:</strong> High-performance backend API framework</span>
                 </div>
-                <div class="gallery-item">
-                    <img src="img1.jpg" alt="Webcam setup for parking detection" class="gallery-image">
-                    <div class="gallery-caption">Lenovo webcam mounted on a sliding wooden beam to simulate drone movement</div>
+                <div class="tech-item">
+                    <i class="fas fa-chart-bar tech-icon"></i>
+                    <span><strong>Three.js:</strong> 3D visualization library for interactive emotion mapping</span>
                 </div>
-                <div class="gallery-item">
-                    <img src="img2.jpg" alt="Tabletop parking model" class="gallery-image">
-                    <div class="gallery-caption">Tabletop model with 20 parking stalls, each with unique two-digit identifiers</div>
+                <div class="tech-item">
+                    <i class="fas fa-palette tech-icon"></i>
+                    <span><strong>Tailwind CSS:</strong> Utility-first CSS framework for modern styling</span>
                 </div>
-                <div class="gallery-item">
-                    <img src="map.png" alt="Parking availability map" class="gallery-image">
-                    <div class="gallery-caption">Admin interface showing real-time parking availability map after image processing</div>
+                <div class="tech-item">
+                    <i class="fas fa-chart-line tech-icon"></i>
+                    <span><strong>D3.js:</strong> Data visualization library for 2D charts and graphs</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Limitations -->
+    <!-- Future Plans -->
     <section class="content-section">
         <div class="container">
             <h2 class="section-title">
-                <i class="fas fa-exclamation-circle section-icon"></i>
-                Limitations & Challenges
+                <i class="fas fa-rocket section-icon"></i>
+                Future Plans
             </h2>
             
-            <div class="limitations">
-                <div class="limitation-item">
-                    <i class="fas fa-car limitation-icon"></i>
-                    <div class="limitation-text">Cars with numbers on the roof can deceive the system into thinking that number is an open parking stall.</div>
+            <div class="future-plans">
+                <div class="plan-item">
+                    <i class="fas fa-heartbeat plan-icon"></i>
+                    <div class="plan-text">
+                        <strong>Enhanced AI Models:</strong> Integrate additional modalities such as heartbeat monitoring, 
+                        EKG signals, and other biometric data for more comprehensive emotional analysis.
+                    </div>
                 </div>
-                <div class="limitation-item">
-                    <i class="fas fa-user limitation-icon"></i>
-                    <div class="limitation-text">People can take others' reserved parking spots without consequences.</div>
+                <div class="plan-item">
+                    <i class="fas fa-microphone plan-icon"></i>
+                    <div class="plan-text">
+                        <strong>Custom Model Training:</strong> Collect and train models on breathing audio to stress score 
+                        data for more accurate local emotional tracking.
+                    </div>
                 </div>
-                <div class="limitation-item">
-                    <i class="fas fa-clock limitation-icon"></i>
-                    <div class="limitation-text">Pre-programmed drone routes may cause delays in updating availability data for specific areas.</div>
+                <div class="plan-item">
+                    <i class="fas fa-video plan-icon"></i>
+                    <div class="plan-text">
+                        <strong>Real-Time Analysis:</strong> Implement live video analysis without requiring pre-recorded clips 
+                        for immediate emotional feedback.
+                    </div>
                 </div>
-                <div class="limitation-item">
-                    <i class="fas fa-snowflake limitation-icon"></i>
-                    <div class="limitation-text">Identifiers can be covered by snow or damaged, affecting system reliability.</div>
+                <div class="plan-item">
+                    <i class="fas fa-lightbulb plan-icon"></i>
+                    <div class="plan-text">
+                        <strong>Personalized Recommendations:</strong> Add AI-powered stress relief suggestions and 
+                        personalized wellness recommendations based on emotional patterns.
+                    </div>
                 </div>
-            </div>
-
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="car-with-number.png" alt="Car with number on roof" class="gallery-image">
-                    <div class="gallery-caption">Example of how cars with numbers on the roof could confuse the system</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="car-with-snow.png" alt="Car covered in snow" class="gallery-image">
-                    <div class="gallery-caption">Weather conditions like snow can obscure parking identifiers</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Achievement -->
-    <section class="content-section">
-        <div class="container">
-            <div class="achievement">
-                <div class="achievement-icon">
-                    <i class="fas fa-trophy"></i>
-                </div>
-                <div class="achievement-title">Science Fair Recognition</div>
-                <div class="achievement-description">
-                    Successfully participated in the Alameda County Science and Engineering Fair (ACSEF) 
-                    with this innovative parking solution project.
+                <div class="plan-item">
+                    <i class="fas fa-mobile-alt plan-icon"></i>
+                    <div class="plan-text">
+                        <strong>Mobile Application:</strong> Develop a mobile version for on-the-go emotional tracking 
+                        with fully local processing capabilities.
+                    </div>
                 </div>
             </div>
         </div>
@@ -650,4 +713,4 @@
         });
     </script>
 </body>
-</html>
+</html> 
