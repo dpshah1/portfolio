@@ -3,6 +3,8 @@ import { useEffect } from 'react'
 import Navbar from './Navbar'
 import './Home.css'
 
+const BASE_URL = import.meta.env.BASE_URL || '/portfolio/'
+
 function Home() {
   useEffect(() => {
     // Smooth scrolling for navigation links
@@ -67,7 +69,7 @@ function Home() {
       title: 'Presto',
       description: 'An AI-powered restaurant customer service platform that revolutionizes ordering by creating intelligent agents that can process PDF menus, extract nutrition information, and provide personalized recommendations using Google Gemini AI.',
       icon: 'fas fa-utensils',
-      image: `${import.meta.env.BASE_URL}logo.png`,
+      image: `${BASE_URL}logo.png`,
       tags: ['Next.js', 'AI/ML', 'Supabase', 'Vercel'],
       link: '/presto'
     },

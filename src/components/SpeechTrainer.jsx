@@ -3,6 +3,8 @@ import { useEffect } from 'react'
 import Navbar from './Navbar'
 import './ProjectDetail.css'
 
+const BASE_URL = import.meta.env.BASE_URL || '/portfolio/'
+
 function SpeechTrainer() {
   useEffect(() => {
     const handleScroll = () => {
@@ -146,7 +148,7 @@ function SpeechTrainer() {
           </div>
 
           <div className="project-image">
-            <img src={`${import.meta.env.BASE_URL}speech-trainer-flowchart.png`} alt="Speech Trainer Project Architecture" />
+            <img src={`${BASE_URL}speech-trainer-flowchart.png`} alt="Speech Trainer Project Architecture" />
             <p className="image-caption">System architecture showing the flow from video input to scoring output</p>
           </div>
         </div>
