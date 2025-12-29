@@ -7,7 +7,7 @@ import react from '@vitejs/plugin-react'
 // - If your repo is username.github.io, use base: '/'
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? '/portfolio/' : '/',
+  base: process.env.VITE_BASE_PATH || (process.env.NODE_ENV === 'production' ? '/portfolio/' : '/'),
   build: {
     outDir: 'dist',
   },
