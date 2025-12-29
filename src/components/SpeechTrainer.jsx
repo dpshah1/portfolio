@@ -146,7 +146,7 @@ function SpeechTrainer() {
           </div>
 
           <div className="project-image">
-            <img src="/speech-trainer-flowchart.png" alt="Speech Trainer Project Architecture" />
+            <img src={`${import.meta.env.BASE_URL}speech-trainer-flowchart.png`} alt="Speech Trainer Project Architecture" />
             <p className="image-caption">System architecture showing the flow from video input to scoring output</p>
           </div>
         </div>
