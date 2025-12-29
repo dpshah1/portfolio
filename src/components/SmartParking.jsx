@@ -101,7 +101,7 @@ function SmartParking() {
           
           <div className="image-gallery">
             <div className="gallery-item">
-              <img src="current_solution.png" alt="Current parking sensor solution" className="gallery-image" />
+              <img src="/current_solution.png" alt="Current parking sensor solution" className="gallery-image" />
               <div className="gallery-caption">Traditional parking stall sensors - expensive and limited to garages</div>
             </div>
           </div>
@@ -184,19 +184,19 @@ function SmartParking() {
 
           <div className="image-gallery">
             <div className="gallery-item">
-              <img src="smart-parking-flowchart.png" alt="Smart Parking System Architecture" className="gallery-image" />
+              <img src="/smart-parking-flowchart.png" alt="Smart Parking System Architecture" className="gallery-image" />
               <div className="gallery-caption">System architecture showing the complete flow from image capture to availability display</div>
             </div>
             <div className="gallery-item">
-              <img src="img1.jpg" alt="Webcam setup for parking detection" className="gallery-image" />
+              <img src="/img1.jpg" alt="Webcam setup for parking detection" className="gallery-image" />
               <div className="gallery-caption">Lenovo webcam mounted on a sliding wooden beam to simulate drone movement</div>
             </div>
             <div className="gallery-item">
-              <img src="img2.jpg" alt="Tabletop parking model" className="gallery-image" />
+              <img src="/img2.jpg" alt="Tabletop parking model" className="gallery-image" />
               <div className="gallery-caption">Tabletop model with 20 parking stalls, each with unique two-digit identifiers</div>
             </div>
             <div className="gallery-item">
-              <img src="map.png" alt="Parking availability map" className="gallery-image" />
+              <img src="/map.png" alt="Parking availability map" className="gallery-image" />
               <div className="gallery-caption">Admin interface showing real-time parking availability map after image processing</div>
             </div>
           </div>
@@ -231,11 +231,11 @@ function SmartParking() {
 
           <div className="image-gallery">
             <div className="gallery-item">
-              <img src="car-with-number.png" alt="Car with number on roof" className="gallery-image" />
+              <img src="/car-with-number.png" alt="Car with number on roof" className="gallery-image" />
               <div className="gallery-caption">Example of how cars with numbers on the roof could confuse the system</div>
             </div>
             <div className="gallery-item">
-              <img src="car-with-snow.png" alt="Car covered in snow" className="gallery-image" />
+              <img src="/car-with-snow.png" alt="Car covered in snow" className="gallery-image" />
               <div className="gallery-caption">Weather conditions like snow can obscure parking identifiers</div>
             </div>
           </div>

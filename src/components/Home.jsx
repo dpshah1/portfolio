@@ -67,7 +67,7 @@ function Home() {
       title: 'Presto',
       description: 'An AI-powered restaurant customer service platform that revolutionizes ordering by creating intelligent agents that can process PDF menus, extract nutrition information, and provide personalized recommendations using Google Gemini AI.',
       icon: 'fas fa-utensils',
-      image: 'logo.png',
+      image: '/logo.png',
       tags: ['Next.js', 'AI/ML', 'Supabase', 'Vercel'],
       link: '/presto'
     },
