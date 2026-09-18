@@ -48,12 +48,6 @@
     font-weight: 400;
 }
 
-.tagline {
-    max-width: 20rem;
-    margin-top: 1rem;
-    color: var(--muted);
-}
-
 .toc {
     display: none;
 }
@@ -284,10 +278,6 @@
     font-size: 0.75rem;
     color: var(--accent);
     background: var(--chip);
-}
-
-.content footer {
-    max-width: 28rem;
 }
 
 @media (min-width: 640px) {

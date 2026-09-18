@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
 import './Home.css'
 
-const sections = ['about', 'experience', 'projects']
+const sections = ['about', 'experience', 'involvement', 'projects']
 
 const jobs = [
   {
@@ -38,6 +38,21 @@ const jobs = [
       'Shipped the platform on AWS (EC2, S3) with FastAPI and React. Patients film themselves walking at home and get feedback back, which cut manual analysis time by 80%.',
     ],
     tags: ['OpenCV', 'YOLOv12', 'AWS', 'FastAPI', 'React'],
+  },
+]
+
+const involvement = [
+  {
+    role: 'Junior Mentor',
+    org: 'Computer Science Mentors',
+    logo: 'csm.png',
+    when: 'Fall 2026',
+    points: [
+      'Teach a weekly discussion section of 5 students in CS 61C (Computer Architecture), covering C, RISC-V assembly, caches, pipelining and parallelism.',
+      'Run each section as a short lecture plus worksheet problems, and rework the pace around whatever the group is actually stuck on.',
+      'Meet weekly with the other mentors to practice teaching and trade feedback on what worked in section.',
+    ],
+    tags: ['Teaching', 'CS 61C', 'RISC-V'],
   },
   {
     role: 'Product Manager',
@@ -151,7 +166,6 @@ function Home() {
           <div>
             <h1><Link to="/">Dhruv Shah</Link></h1>
             <h2>EECS student at UC Berkeley</h2>
-            <p className="tagline">I build AI agents and the full-stack apps around them.</p>
             <nav className="toc" aria-label="Sections">
               <ul>
                 {sections.map((id) => (
@@ -180,27 +194,46 @@ function Home() {
           <section id="about" className="about">
             <h2 className="section-label">About</h2>
             <p>
-              Hey! I’m Dhruv, an EECS student at UC Berkeley, class of 2028. I like building full-stack apps
-              and working with AI, especially agents that have to be <strong>reliable</strong>, not just
-              impressive in a demo.
+              Hey! I’m Dhruv, a third-year EECS student at UC Berkeley. My main interests are AI agents
+              and machine learning, systems (databases, OS, networking), full-stack development, and
+              product management.
             </p>
             <p>
-              This summer I was an AI engineer intern at <strong>Chipchop</strong>, where I took an FPGA
-              debugging agent from fixing 12% of its target bugs to 96%. I also went through
-              ServiceNow’s <strong>AI.Accelerate</strong> bootcamp, building an expense-claims agent and
-              the eval suite that tests it. Before that I built gait analysis at <strong>Anchor Logics</strong>,
-              and I’m a product manager at <strong>Web Development at Berkeley</strong>.
+              This summer I was an AI engineer intern at <strong>Chipchop</strong>, where I improved the
+              reliability of a Verilog/SystemVerilog debugging agent. I also went
+              through <strong>ServiceNow’s AI.Accelerate bootcamp</strong>, building an
+              expense-claims agent and the eval suite that tests it. Before that I built gait analysis at <strong>Anchor Logics</strong>,
+              and I’m a product manager at <strong>Web Development at Berkeley</strong>. More details about my
+              experience and projects below.
             </p>
-            <p>
-              I like hackathons too: Moods and Metrics won an award at TreeHacks 2025, and Netra AI came
-              out of Cal Hacks 11.0. Feel free to reach out.
-            </p>
+            <p>Feel free to reach out.</p>
           </section>
 
           <section id="experience">
             <h2 className="section-label">Experience</h2>
             <ol className="cards">
               {jobs.map((job) => (
+                <li key={job.org} className="card">
+                  <div className="aside">
+                    <p className="when">{job.when}</p>
+                    <img className="logo" src={`${import.meta.env.BASE_URL}logos/${job.logo}`} alt={`${job.org} logo`} width="56" height="56" loading="lazy" />
+                  </div>
+                  <div>
+                    <h3>{job.role} · <span>{job.org}</span></h3>
+                    <ul className="points">
+                      {job.points.map((point) => <li key={point}>{point}</li>)}
+                    </ul>
+                    <Tags tags={job.tags} />
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <section id="involvement">
+            <h2 className="section-label">Campus involvement</h2>
+            <ol className="cards">
+              {involvement.map((job) => (
                 <li key={job.org} className="card">
                   <div className="aside">
                     <p className="when">{job.when}</p>
@@ -237,10 +270,6 @@ function Home() {
               ))}
             </ul>
           </section>
-
-          <footer className="mono">
-            Loosely inspired by Brittany Chiang’s site. Built with React and Vite, set in IBM Plex.
-          </footer>
         </main>
       </div>
     </>
