@@ -12,7 +12,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme="light"]) {
         --bg: #141311;
         --text: #ece8df;
         --muted: #a39e92;
@@ -22,6 +22,37 @@
         --hover: rgb(236 232 223 / 0.04);
         --glow: rgb(224 118 79 / 0.08);
     }
+}
+
+:root[data-theme="dark"] {
+    --bg: #141311;
+    --text: #ece8df;
+    --muted: #a39e92;
+    --rule: #2e2c27;
+    --accent: #e0764f;
+    --chip: rgb(224 118 79 / 0.12);
+    --hover: rgb(236 232 223 / 0.04);
+    --glow: rgb(224 118 79 / 0.08);
+}
+
+.theme-toggle {
+    display: block;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    color: var(--text);
+}
+
+.theme-toggle svg {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
 }
 
 *, *::before, *::after {

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
+import ThemeToggle from './ThemeToggle'
 import './Home.css'
 
 const sections = ['about', 'experience', 'involvement', 'projects']
@@ -187,6 +188,7 @@ function Home() {
                 </a>
               </li>
             ))}
+            <li><ThemeToggle /></li>
           </ul>
         </header>
 
